@@ -1,6 +1,9 @@
 import sqlite3
 import csv
-from myapp.models import Book  # Replace 'myapp' with the actual name of your Django app
+import django
+django.setup()
+
+from rlib.models import Book  # Replace 'myapp' with the actual name of your Django app
 
 # Function to insert data into the SQLite database using Django model
 def insert_book(data):
@@ -24,7 +27,7 @@ with open(csv_file_path, 'r', newline='', encoding='utf-8') as csv_file:
 
     for row in csv_reader:
         # Only insert data for columns that exist in the defined field names
-        filtered_row = {key: row[key] for key in header if key in row}
+        filtered_row = {str(key): str(row[key]) for key in header if (key in row) and (key is not None)}
         insert_book(filtered_row)
 
 # Commit changes and close the connection
