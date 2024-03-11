@@ -26,6 +26,7 @@ with open(csv_file_path, 'r', newline='', encoding='utf-8') as csv_file:
     header = next(csv_reader)  # Get header row
 
     for row in csv_reader:
+        print(row)
         # Only insert data for columns that exist in the defined field names
         filtered_row = {str(key): str(row[key]) for key in header if (key in row) and (key is not None)}
         insert_book(filtered_row)
