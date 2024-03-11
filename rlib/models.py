@@ -4,6 +4,7 @@ from django.db import models
 # Create your models here.
 
 class Book(models.Model):
+    BookId = models.IntegerField(primary_key=True)
     BookTitle = models.CharField(max_length=255)
     Description = models.TextField()
     Author = models.CharField(max_length=255)
@@ -18,6 +19,7 @@ class Book(models.Model):
     Checked = models.CharField(max_length=255, null=True, blank=True)
     ISBN = models.CharField(max_length=255)
     Status = models.CharField(max_length=255, default='Available', choices=[('Available', 'Available'), ('Damaged', 'Damaged'), ('Lost', 'Lost')])
+
 
     def __str__(self):
         return self.BookTitle

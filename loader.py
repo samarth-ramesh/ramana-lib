@@ -22,7 +22,7 @@ conn.commit()
 csv_file_path = 'rlib.csv'  # Replace with the actual path to your CSV file
 
 with open(csv_file_path, 'r', newline='', encoding='utf-8') as csv_file:
-    csv_reader = csv.DictReader(csv_file, fieldnames=['BookTitle', 'Description', 'Author', 'Category', 'Volume', 'Language', 'OldShelfCode', 'OldAccNo', 'Publisher', 'YearOfPublication', 'NewShelfCode', 'Checked', 'ISBN', 'Status'])
+    csv_reader = csv.DictReader(csv_file, fieldnames=['BookTitle', 'Description', 'Author', 'Category', 'Volume', 'Language', 'OldShelfCode', 'OldAccNo', 'Publisher', 'YearOfPublication', 'NewShelfCode', 'Checked', 'BookId', 'ISBN', 'Status'])
     header = next(csv_reader)  # Get header row
 
     for row in csv_reader:
