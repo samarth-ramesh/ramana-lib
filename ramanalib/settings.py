@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-i8-b@j6x4sy$p6$807853hti@6e#-j42y&x%f)qw05wneno)@g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ramana.samarthr.com', '*']
 
 
 # Application definition
@@ -70,6 +70,10 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'ramanalib.wsgi.application'
+
+CSRF_TRUSTED_ORIGINS = [
+        'https://ramana.samarthr.com'
+]
 
 
 # Database
