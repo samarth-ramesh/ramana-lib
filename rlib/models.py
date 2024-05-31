@@ -4,7 +4,7 @@ from django.db import models
 # Create your models here.
 
 class Book(models.Model):
-    BookId = models.IntegerField(primary_key=True)
+    BookId = models.AutoField(primary_key=True)
     BookTitle = models.CharField(max_length=255)
     Description = models.TextField()
     Author = models.CharField(max_length=255)
