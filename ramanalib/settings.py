@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-i8-b@j6x4sy$p6$807853hti@6e#-j42y&x%f)qw05wneno)@g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ramana.samarthr.com', '*']
+ALLOWED_HOSTS = ['library.sriramanakendram.org', '*']
 
 
 # Application definition
@@ -72,7 +72,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'ramanalib.wsgi.application'
 
 CSRF_TRUSTED_ORIGINS = [
-        'https://ramana.samarthr.com'
+        'https://library.sriramanakendram.org'
 ]
 
 
