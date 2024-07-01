@@ -3,6 +3,7 @@ from django.db import models
 
 # Create your models here.
 
+
 class Book(models.Model):
     BookId = models.AutoField(primary_key=True)
     BookTitle = models.CharField(max_length=255)
