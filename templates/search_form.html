@@ -53,12 +53,25 @@
         }
         h1 {
             text-align: center;
+            display: inline;
+        }
+        a {
+            text-align: right;
+        }
+        div > div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-bottom: 2em;
         }
     </style>
 </head>
 <body>
 <div>
-    <h1>Welcome to Sri Ramana Kendram Library</h1>
+    <div>
+        <h1>Welcome to Sri Ramana Kendram Library</h1>
+        <a href="/admin">Login to admin interface</a>
+    </div>
     <form method="post">
         {% csrf_token %}
         {{ form.as_table }}
