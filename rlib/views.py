@@ -1,6 +1,6 @@
 from django import forms
 from django.db.models import Q
-from django.forms.forms import Form
+from django.forms.forms import Form, BaseForm
 from django.http import HttpResponse
 from django.shortcuts import render
 from rlib.models import Book
