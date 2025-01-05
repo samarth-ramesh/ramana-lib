@@ -16,7 +16,8 @@ class SearchForm(Form):
 def index(request):
     if request.method == "GET":
         search_form = SearchForm()
-        return render(request, "search_form.html", {"form": search_form})
+        books = Book.objects.all()[:200]
+        return render(request, "search_form.html", {"form": search_form, 'books': books})
     else:
         search_form = SearchForm(request.POST)
         if search_form.is_valid():
